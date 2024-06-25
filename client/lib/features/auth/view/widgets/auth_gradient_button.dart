@@ -2,8 +2,9 @@ import 'package:client/core/theme/app_pallete.dart';
 import 'package:flutter/material.dart';
 
 class AuthGradientButton extends StatelessWidget {
+  final VoidCallback onTap;
   final String text;
-  const AuthGradientButton({super.key, required this.text});
+  const AuthGradientButton({super.key, required this.text,required this.onTap});
 
   @override
   Widget build(BuildContext context) {
