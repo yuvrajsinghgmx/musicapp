@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Music App',
       theme: Apptheme.darkThemeMode,
-      home: const LoginPage(),
+      home: const SignupPage(),
     );
   }
 }

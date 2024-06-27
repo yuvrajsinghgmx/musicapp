@@ -29,51 +29,53 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: Form(
-          key: formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                'Sign In.',
-                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              CustomField(
-                controller: emailController,
-                hintText: 'Email',
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              CustomField(
-                  controller: passwordController,
-                  isObscureText: true,
-                  hintText: 'Password'),
-              const SizedBox(
-                height: 20,
-              ),
-               AuthGradientButton(
-                text: 'Sign In',
-                onTap: () {},
+        child: SingleChildScrollView(
+          child: Form(
+            key: formKey,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  'Sign In.',
+                  style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                 ),
-              const SizedBox(
-                height: 20,
-              ),
-              RichText(
-                  text: TextSpan(
-                      text: 'Don\'t have an account ? ',
-                      style: Theme.of(context).textTheme.titleMedium,
-                      children: const [
-                    TextSpan(
-                        text: 'Sign Up',
-                        style: TextStyle(
-                            color: Pallete.gradient2,
-                            fontWeight: FontWeight.bold))
-                  ]))
-            ],
+                const SizedBox(
+                  height: 30,
+                ),
+                CustomField(
+                  controller: emailController,
+                  hintText: 'Email',
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                CustomField(
+                    controller: passwordController,
+                    isObscureText: true,
+                    hintText: 'Password'),
+                const SizedBox(
+                  height: 20,
+                ),
+                AuthGradientButton(
+                  text: 'Sign In',
+                  onTap: () {},
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                RichText(
+                    text: TextSpan(
+                        text: 'Don\'t have an account ? ',
+                        style: Theme.of(context).textTheme.titleMedium,
+                        children: const [
+                      TextSpan(
+                          text: 'Sign Up',
+                          style: TextStyle(
+                              color: Pallete.gradient2,
+                              fontWeight: FontWeight.bold))
+                    ]))
+              ],
+            ),
           ),
         ),
       ),
